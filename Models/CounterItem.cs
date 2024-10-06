@@ -1,7 +1,10 @@
-﻿namespace Counter.Models
+﻿using SQLite;
+
+namespace Counter.Models
 {
     public class CounterItem
     {
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public String Name { get; set; } = "";
         public string Description { get; set; } = "";
