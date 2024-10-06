@@ -9,6 +9,10 @@
     Title="Counter">
     <TabBar>
         <ShellContent
+            Title="App"
+            ContentTemplate="{DataTemplate views:AllCountersPage}"
+            Route="AllCountersPage" />
+        <ShellContent
             Title="About"
             ContentTemplate="{DataTemplate views:AboutPage}"
             Route="AboutPage" />
