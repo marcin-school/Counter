@@ -6,4 +6,9 @@ public partial class AllCountersPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+		Shell.Current.GoToAsync(nameof(CreateCounterPage));
+    }
 }

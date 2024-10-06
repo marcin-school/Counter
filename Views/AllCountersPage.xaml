@@ -10,6 +10,7 @@
     </ContentPage.BindingContext>
     <ScrollView>
         <VerticalStackLayout>
+            <Button Text="Create Counter" Clicked="Button_Clicked" />
             <ListView ItemsSource="{Binding Items}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
