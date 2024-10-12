@@ -11,7 +11,7 @@
     <ScrollView>
         <VerticalStackLayout>
             <Button Text="Create Counter" Clicked="Button_Clicked" />
-            <ListView ItemsSource="{Binding Items}">
+            <ListView x:Name="listView">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell x:DataType="models:CounterItem">
