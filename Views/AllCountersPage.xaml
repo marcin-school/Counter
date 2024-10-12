@@ -15,8 +15,20 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell x:DataType="models:CounterItem">
-                            <Label
-                                Text="{Binding Name}" />
+                            <HorizontalStackLayout>
+                                <Label
+                                    Text="{Binding Name}" />
+                                <Label
+                                    Text="{Binding Value}" />
+                                <Button
+                                    Text="Edytuj"
+                                    Command="{Binding Source={x:Reference Name=ListView}, Path=BindingContext.EditItemCommand}"
+                                    CommandParameter="{Binding .}" />
+                                <Button
+                                    Text="Usuń"
+                                    Command="{Binding Source={x:Reference Name=ListView}, Path=BindingContext.RemoveItemCommand}"
+                                    CommandParameter="{Binding .}" />
+                            </HorizontalStackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
