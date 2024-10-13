@@ -2,9 +2,9 @@
 {
     public class AllCounters
     {
-        public Task<List<CounterItem>> Items {
+        public List<CounterItem> Items {
             get {
-                return App.Database.GetItemsAsync();
+                return App.Database.GetItems();
             }
         }
     }

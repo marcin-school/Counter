@@ -1,23 +1,18 @@
-﻿using SQLite;
-using Counter.Models;
+﻿using Counter.Models;
 
 namespace Counter.Data
 {
     public class Database
     {
-        private readonly SQLiteAsyncConnection _database;
-        public Database(String dpPath) {
-            _database = new SQLiteAsyncConnection(dpPath);
-            _database.CreateTableAsync<CounterItem>().Wait();
+        public Database(String dbPath) {}
+        public List<CounterItem> GetItems() {
+            return new List<CounterItem>();
         }
-        public async Task<List<CounterItem>> GetItemsAsync() {
-            return await _database.Table<CounterItem>().ToListAsync();
+        public int SaveItem(CounterItem counter) {
+            return 0;
         }
-        public async Task<int> SaveItemAsync(CounterItem counter) {
-            return await _database.InsertAsync(counter);
-        }
-        public async Task<int> UpdateItemAsync(CounterItem counter) {
-            return await _database.UpdateAsync(counter);
+        public int UpdateItem(CounterItem counter) {
+            return 0;
         }
     }
 }

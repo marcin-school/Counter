@@ -1,3 +1,5 @@
+using Counter.Models;
+
 namespace Counter.Views;
 
 public partial class AllCountersPage : ContentPage
@@ -5,11 +7,7 @@ public partial class AllCountersPage : ContentPage
 	public AllCountersPage()
 	{
 		InitializeComponent();
-        LoadData();
-	}
-
-	private async void LoadData() {
-        listView.ItemsSource = await App.Database.GetItemsAsync();
+        listView.ItemsSource = new AllCounters().Items;
     }
 
     private void Button_Clicked(object sender, EventArgs e)

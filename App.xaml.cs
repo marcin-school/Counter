@@ -9,8 +9,9 @@ namespace Counter
             get {
                 if (database == null)
                 {
-                    var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "items.db");
-                    database = new Database(dbPath);
+                    var folderPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                    var databasePath = Path.Combine(folderPath, "database.json");
+                    database = new Database(databasePath);
                 }
                 return database;
             }
