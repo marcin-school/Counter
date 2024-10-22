@@ -1,9 +1,8 @@
-﻿using System.ComponentModel;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 
 namespace Counter.Models
 {
-    public class AllCounters : INotifyPropertyChanged
+    public class AllCounters
     {
         public ICommand RemoveItemCommand { get; }
         public ICommand EditItemCommand { get; }
@@ -26,11 +25,6 @@ namespace Counter.Models
         private void EditItem(CounterItem item)
         {
             throw new NotImplementedException();
-        }
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName) {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

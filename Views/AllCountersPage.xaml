@@ -22,11 +22,11 @@
                                     Text="{Binding Value}" />
                                 <Button
                                     Text="Edytuj"
-                                    Command="{Binding Source={x:Reference Name=ListView}, Path=BindingContext.EditItemCommand}"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type ListView}}, Path=BindingContext.EditItemCommand}"
                                     CommandParameter="{Binding .}" />
                                 <Button
                                     Text="Usuń"
-                                    Command="{Binding Source={x:Reference Name=ListView}, Path=BindingContext.RemoveItemCommand}"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type ListView}}, Path=BindingContext.RemoveItemCommand}"
                                     CommandParameter="{Binding .}" />
                             </HorizontalStackLayout>
                         </ViewCell>
