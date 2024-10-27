@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using Counter.Views;
+using System.Windows.Input;
 
 namespace Counter.Models
 {
@@ -6,6 +7,7 @@ namespace Counter.Models
     {
         public ICommand RemoveItemCommand { get; }
         public ICommand EditItemCommand { get; }
+        public static CounterItem? CurrentItem { get; set; }
         public AllCounters() {
             RemoveItemCommand = new Command<CounterItem>(RemoveItem);
             EditItemCommand = new Command<CounterItem>(EditItem);
@@ -22,9 +24,10 @@ namespace Counter.Models
             throw new NotImplementedException();
         }
 
-        private void EditItem(CounterItem item)
+        private async void EditItem(CounterItem item)
         {
-            throw new NotImplementedException();
+            CurrentItem = item;
+            await Shell.Current.GoToAsync(nameof(CounterPage));
         }
     }
 }

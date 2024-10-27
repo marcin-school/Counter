@@ -8,6 +8,7 @@ namespace Counter
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(CreateCounterPage), typeof(CreateCounterPage));
+            Routing.RegisterRoute(nameof(CounterPage), typeof(CounterPage));
         }
     }
 }
