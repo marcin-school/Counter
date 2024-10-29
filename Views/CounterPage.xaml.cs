@@ -28,5 +28,12 @@ namespace Counter.Views
             label_value.Text = _item.Value.ToString();
             App.Database.UpdateItem(_item);
         }
+
+        private void btn_reset_Clicked(object sender, EventArgs e)
+        {
+            _item.Value = _item.InitialValue;
+            label_value.Text = _item.Value.ToString();
+            App.Database.UpdateItem(_item);
+        }
     }
 }

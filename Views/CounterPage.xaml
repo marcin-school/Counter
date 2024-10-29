@@ -22,5 +22,9 @@
             x:Name="btn_plus"
             Text="+"
             Clicked="btn_plus_Clicked" />
+        <Button
+            x:Name="btn_reset"
+            Text="Reset"
+            Clicked="btn_reset_Clicked" />
     </VerticalStackLayout>
 </ContentPage>
