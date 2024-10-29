@@ -23,5 +23,6 @@ public partial class CreateCounterPage : ContentPage
         CounterItem counter = new CounterItem(name, description, initialValue);
         App.Database.SaveItem(counter);
         await Shell.Current.GoToAsync("..");
+        AllCountersPage.Instance.UpdateData();
     }
 }
