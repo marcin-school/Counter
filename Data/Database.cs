@@ -54,6 +54,7 @@ namespace Counter.Data
             if (!_items.Exists(item => item.Id == counterId)) throw new Exception("Cannot find CounterItem with given id");
             int arrayId = _items.FindIndex(item => item.Id == counterId);
             _items[arrayId] = counter;
+            UpdateFile();
             return counterId;
         }
     }

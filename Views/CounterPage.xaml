@@ -4,9 +4,23 @@
              x:Class="Counter.Views.CounterPage"
              Title="Counter">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
+        <Label
+            x:Name="label_name"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Label
+            x:Name="label_description"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+        <Label
+            x:Name="label_value" />
+        <Button
+            x:Name="btn_minus"
+            Text="-"
+            Clicked="btn_minus_Clicked" />
+        <Button
+            x:Name="btn_plus"
+            Text="+"
+            Clicked="btn_plus_Clicked" />
     </VerticalStackLayout>
 </ContentPage>
