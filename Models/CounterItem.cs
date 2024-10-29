@@ -12,6 +12,7 @@
             this.Name = Name;
             this.Description = Description;
             this.InitialValue = InitialValue;
+            this.Value = InitialValue;
         }
     }
 }
