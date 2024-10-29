@@ -57,5 +57,12 @@ namespace Counter.Data
             UpdateFile();
             return counterId;
         }
+        public void DeleteItem(CounterItem counter) {
+            int counterId = counter.Id;
+            if (counterId == -1) throw new Exception("CounterItem does not have any valid id");
+            if (!_items.Exists(item => item.Id == counterId)) throw new Exception("Cannot find CounterItem with given id");
+            _items.Remove(counter);
+            UpdateFile();
+        }
     }
 }

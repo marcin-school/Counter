@@ -21,7 +21,8 @@ namespace Counter.Models
 
         private void RemoveItem(CounterItem item)
         {
-            throw new NotImplementedException();
+            App.Database.DeleteItem(item);
+            AllCountersPage.Instance.UpdateData();
         }
 
         private async void EditItem(CounterItem item)
