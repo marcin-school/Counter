@@ -5,26 +5,40 @@
              Title="Counter">
     <VerticalStackLayout>
         <Label
+            Margin="10"
+            FontSize="Large"
             x:Name="label_name"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <Label
+            FontSize="Subtitle"
             x:Name="label_description"
             VerticalOptions="Center"
             HorizontalOptions="Center" />
-        <Label
-            x:Name="label_value" />
-        <Button
-            x:Name="btn_minus"
-            Text="-"
-            Clicked="btn_minus_Clicked" />
-        <Button
-            x:Name="btn_plus"
-            Text="+"
-            Clicked="btn_plus_Clicked" />
-        <Button
-            x:Name="btn_reset"
-            Text="Reset"
-            Clicked="btn_reset_Clicked" />
+        <HorizontalStackLayout
+            Padding="10"
+            HorizontalOptions="Center">
+            <Label
+                Margin="5"
+                FontSize="Medium"
+                x:Name="label_value"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+            <Button
+                Margin="5"
+                x:Name="btn_minus"
+                Text="-"
+                Clicked="btn_minus_Clicked" />
+            <Button
+                Margin="5"
+                x:Name="btn_plus"
+                Text="+"
+                Clicked="btn_plus_Clicked" />
+            <Button
+                Margin="5"
+                x:Name="btn_reset"
+                Text="Reset"
+                Clicked="btn_reset_Clicked" />
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

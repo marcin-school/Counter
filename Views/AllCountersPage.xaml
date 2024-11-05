@@ -10,21 +10,40 @@
     </ContentPage.BindingContext>
     <ScrollView>
         <VerticalStackLayout>
-            <Button Text="Create Counter" Clicked="Button_Clicked" />
-            <ListView x:Name="listView">
+            <Button
+                Margin="10"
+                Text="Create Counter"
+                Clicked="Button_Clicked" />
+            <ListView
+                x:Name="listView"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell x:DataType="models:CounterItem">
-                            <HorizontalStackLayout>
+                            <HorizontalStackLayout
+                                Margin="10"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center">
                                 <Label
-                                    Text="{Binding Name}" />
+                                    Margin="5"
+                                    FontSize="Medium"
+                                    Text="{Binding Name}"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center" />
                                 <Label
-                                    Text="{Binding Value}" />
+                                    Margin="5"
+                                    FontSize="Medium"
+                                    Text="{Binding Value}"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center" />
                                 <Button
+                                    Margin="5"
                                     Text="Edytuj"
                                     Command="{Binding Source={RelativeSource AncestorType={x:Type ListView}}, Path=BindingContext.EditItemCommand}"
                                     CommandParameter="{Binding .}" />
                                 <Button
+                                    Margin="5"
                                     Text="Usuń"
                                     Command="{Binding Source={RelativeSource AncestorType={x:Type ListView}}, Path=BindingContext.RemoveItemCommand}"
                                     CommandParameter="{Binding .}" />
